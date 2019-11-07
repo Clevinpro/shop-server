@@ -41,7 +41,7 @@ apiRoutes
   .get("/auth/current", currentUser)
 
   // Products
-  .get("/products/:slug", getProduct)
+  .get("/products/:id", getProduct)
   .get("/products", getProducts)
 
   .use(verifyToken)
