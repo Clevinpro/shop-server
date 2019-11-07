@@ -53,7 +53,7 @@ apiRoutes
   .post("/upload", uploadImages)
 
   // Products
-  .post("/products", createProduct)
+  .post("/products", createProduct())
   .put("/products/:id", updateProduct)
   .delete('/products/:id', deleteProduct)
 
