@@ -1,7 +1,7 @@
 const Product = require("../../../domain/db/schemas/product");
 
 const getProduct = (request, response) => {
-  const slug = request.params.slug;
+  const id = request.params.id;
 
   const sendResponse = product => {
     response.set("Content-type", "application/json");
@@ -16,7 +16,7 @@ const getProduct = (request, response) => {
     });
   };
 
-  const findProduct = Product.findOne({ slug: slug });
+  const findProduct = Product.findOne({ _id: id });
 
   findProduct.then(sendResponse).catch(sendError);
 };
