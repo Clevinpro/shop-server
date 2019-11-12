@@ -65,6 +65,7 @@ const createProduct = (request, response) => {
   console.log('image___________________________ :', image);
 
   const productData = { ...product };
+  productData.material = JSON.parse(productData.material);
   productData.image = image;
 
   const newProduct = new Product(productData);
